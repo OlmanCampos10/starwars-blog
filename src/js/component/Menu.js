@@ -6,57 +6,52 @@ import { Link } from "react-router-dom";
 export const Menu = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<Container>
-			<Navbar bg="dark">
-				<Link to="/">
-					<Navbar.Brand href="#home">
-						<img
-							src="https://www.vippng.com/png/detail/1-13632_star-wars-logo-png-star-wars-logo-black.png"
-							width="70"
-							height="45"
-							className="d-inline-block align-top"
-							alt="React Bootstrap logo"
-						/>
-					</Navbar.Brand>
-				</Link>
+		<Navbar bg="dark">
+			<Link to="/">
+				<Navbar.Brand href="#home">
+					<img
+						src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG43.png"
+						width="100"
+						height="80"
+						className="d-inline-block align-top"
+						alt="React Bootstrap logo"
+					/>
+				</Navbar.Brand>
+			</Link>
 
-				<Navbar.Collapse className="justify-content-end">
-					<DropdownButton
-						id="dropdown-basic-button"
-						variant="dark"
-						title={"Favorites " + store.favorites.length}>
-						{store.favorites.length == 0 ? (
-							<Dropdown.Item>Empty</Dropdown.Item>
-						) : (
-							store.favorites.map((favorite, i) => {
-								return (
-									<Dropdown.Item eventKey={i} key={i} onClick={() => actions.deleteFavorite(i)}>
-										{favorite.type == "people" ? (
-											<div>
-												<i className="fas fa-id-card">
-													&nbsp;
-													{favorite.name}
-												</i>
-												&nbsp;&nbsp;&nbsp;
-												<i className="far fa-trash-alt" />
-											</div>
-										) : (
-											<div>
-												<i className="fas fa-globe-americas">
-													&nbsp;
-													{favorite.name}
-												</i>
-												&nbsp;&nbsp;&nbsp;
-												<i className="far fa-trash-alt" />
-											</div>
-										)}
-									</Dropdown.Item>
-								);
-							})
-						)}
-					</DropdownButton>
-				</Navbar.Collapse>
-			</Navbar>
-		</Container>
+			<Navbar.Collapse className="justify-content-end">
+				<DropdownButton id="dropdown-basic-button" variant="dark" title={"Favoritos " + store.favorites.length}>
+					{store.favorites.length == 0 ? (
+						<Dropdown.Item>Vacio</Dropdown.Item>
+					) : (
+						store.favorites.map((favorite, i) => {
+							return (
+								<Dropdown.Item eventKey={i} key={i} onClick={() => actions.deleteFavorite(i)}>
+									{favorite.type == "people" ? (
+										<div>
+											<i className="fas fa-id-card">
+												&nbsp;
+												{favorite.name}
+											</i>
+											&nbsp;&nbsp;&nbsp;
+											<i className="far fa-trash-alt" />
+										</div>
+									) : (
+										<div>
+											<i className="fas fa-globe-americas">
+												&nbsp;
+												{favorite.name}
+											</i>
+											&nbsp;&nbsp;&nbsp;
+											<i className="far fa-trash-alt" />
+										</div>
+									)}
+								</Dropdown.Item>
+							);
+						})
+					)}
+				</DropdownButton>
+			</Navbar.Collapse>
+		</Navbar>
 	);
 };

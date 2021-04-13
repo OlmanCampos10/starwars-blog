@@ -4,36 +4,38 @@ import { Link } from "react-router-dom";
 
 export const Home = () => {
 	return (
-		<Container>
-			<Carousel>
-				<Carousel.Item>
-					<Link to="/characters">
-						<img
-							className="d-block w-100"
-							src="https://lumiere-a.akamaihd.net/v1/images/the-mandalorian-s2-single-hero-b-desktop_28751c8d.jpeg?region=0,0,1200,509"
-							alt="people"
-						/>
-					</Link>
-					<Carousel.Caption>
-						<h3>Personajes</h3>
-						<p>Elige tus personajes Favoritos</p>
-					</Carousel.Caption>
-				</Carousel.Item>
+		<Carousel>
+			<Carousel.Item>
+				<Link to="/characters">
+					<img
+						className="d-block w-100"
+						src="https://images.wallpapersden.com/image/download/star-wars-the-clone-wars-4k_a25pZWaUmZqaraWkpJRobWllrWdma2U.jpg"
+						width="700"
+						height="830"
+						alt="people"
+					/>
+				</Link>
+				<Carousel.Caption>
+					<h3>Personajes</h3>
+					<p>Elige tus personajes Favoritos</p>
+				</Carousel.Caption>
+			</Carousel.Item>
 
-				<Carousel.Item>
-					<Link to="/planetsView">
-						<img
-							className="d-block w-100"
-							src="https://lumiere-a.akamaihd.net/v1/images/aeos-prime-main_1af6e847.jpeg?region=280%2C0%2C720%2C720"
-							alt="planets"
-						/>
-					</Link>
-					<Carousel.Caption>
-						<h3>Planets</h3>
-						<p>Have a Look at The Names of The Planets</p>
-					</Carousel.Caption>
-				</Carousel.Item>
-			</Carousel>
-		</Container>
+			<Carousel.Item>
+				<Link to="/planetsView">
+					<img
+						className="d-block w-100"
+						src="https://www.teahub.io/photos/full/55-555266_star-wars-poster-4k.jpg"
+						width="700"
+						height="830"
+						alt="planets"
+					/>
+				</Link>
+				<Carousel.Caption>
+					<h3>Planetas</h3>
+					<p>Elige tus planetas Favoritos</p>
+				</Carousel.Caption>
+			</Carousel.Item>
+		</Carousel>
 	);
 };

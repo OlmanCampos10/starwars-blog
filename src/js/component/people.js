@@ -11,10 +11,7 @@ export const People = props => {
 	return (
 		<Container>
 			<h1 className="text-center mt-5">PERSONAJES</h1>
-			{/* <Form inline>
-				<FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={actions.search} />
-				<Button variant="outline-dark">Search</Button>
-			</Form> */}
+
 			<CardDeck>
 				{props.data.map((people, i) => {
 					return (
