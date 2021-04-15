@@ -16,7 +16,7 @@ export const Planets = props => {
 							<Card>
 								<Card.Img
 									variant="top"
-									src="https://lumiere-a.akamaihd.net/v1/images/databank_mandalore_01_169_91a551b7.jpeg?region=0%2C0%2C1560%2C878"
+									src="https://s3.amazonaws.com/wuukia-assets/wp-content/uploads/sites/69/2020/04/08202438/mceu0sk8ryligk174ooxs1keesi518tlvj7-1.jpg"
 								/>
 								<Card.Body>
 									<Card.Title>{planet.name}</Card.Title>

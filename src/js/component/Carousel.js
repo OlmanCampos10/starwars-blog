@@ -36,6 +36,22 @@ export const Home = () => {
 					<p>Elige tus planetas Favoritos</p>
 				</Carousel.Caption>
 			</Carousel.Item>
+
+			<Carousel.Item>
+				<Link to="/planetsView">
+					<img
+						className="d-block w-100"
+						src="https://www.teahub.io/photos/full/55-555266_star-wars-poster-4k.jpg"
+						width="700"
+						height="830"
+						alt="planets"
+					/>
+				</Link>
+				<Carousel.Caption>
+					<h3>Vehiculos</h3>
+					<p>Elige tus Vehiculos Favoritos</p>
+				</Carousel.Caption>
+			</Carousel.Item>
 		</Carousel>
 	);
 };

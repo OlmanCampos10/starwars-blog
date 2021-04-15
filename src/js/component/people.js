@@ -19,7 +19,7 @@ export const People = props => {
 							<Card>
 								<Card.Img
 									variant="top"
-									src="https://lumiere-a.akamaihd.net/v1/images/the-mandalorian-s2-single-hero-b-desktop_28751c8d.jpeg?region=0,0,1200,509"
+									src="https://www.xtrafondos.com/descargar.php?id=4496&resolucion=3840x2400,1200,509"
 								/>
 								<Card.Body>
 									<Card.Title>{people.name}</Card.Title>
